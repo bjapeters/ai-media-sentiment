@@ -27,16 +27,14 @@ Full report (PDF): **[docs/report.pdf](docs/report.pdf)**
 
 ## Repo layout
 
-scripts/ one CLI per stage (clean, train, predict, evaluate, plot)
-docs/ figures/ + report.pdf
-requirements.txt
-README.md
+```markdown
+## Repo layout
+- **scripts/** – one CLI per stage (clean, train, predict, evaluate, plot)
+- **docs/** – figures + report.pdf
+- **requirements.txt**
+- **README.md**
 
-bash
-Copy
-Edit
-
-Raw data, notebooks, and model files are excluded via `.gitignore`.
+Raw data and model files are excluded via `.gitignore`.
 
 ---
 
@@ -54,4 +52,3 @@ python scripts/evaluate_model.py --labeled data/labeled_data.csv --scored data/s
 python scripts/plot_results.py --csv data/scored_with_predictions.csv --kind rolling --window 14
 Dependencies
 Python 3.10 • PyTorch 2.x • Transformers ≥ 4.40 • pandas • scikit‑learn • matplotlib • ftfy
-
