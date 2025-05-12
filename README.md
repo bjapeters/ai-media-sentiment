@@ -39,16 +39,14 @@ Raw data and model files are excluded via `.gitignore`.
 ---
 
 ## Quick start
-
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# clean -> train -> predict -> evaluate -> plot
+# clean → train → predict → evaluate → plot
 python scripts/clean_data.py  --input data/data_1.csv --output data/data_clean_1.csv
 python scripts/train_model.py --labeled data/labeled_data.csv --output models/distilbert_v1/
 python scripts/predict.py     --model models/distilbert_v1/ --input data/unlabeled_data.csv --output data/sentiment_results.csv
-python scripts/evaluate_model.py --labeled data/labeled_data.csv --scored data/sentiment_results.csv --out data/scored_with_predictions.csv --plot
+python scripts/evaluate_model.py --labeled data/labeled_data.csv --scored data/sentiment_results.csv \
+                                 --out data/scored_with_predictions.csv --plot
 python scripts/plot_results.py --csv data/scored_with_predictions.csv --kind rolling --window 14
-Dependencies
-Python 3.10 • PyTorch 2.x • Transformers ≥ 4.40 • pandas • scikit‑learn • matplotlib • ftfy
