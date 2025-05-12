@@ -1,0 +1,34 @@
+# --- virtual environments ---
+venv/
+.env/
+.venv/
+
+# --- Python cache & compiled files ---
+__pycache__/
+*.py[cod]
+*.so
+*.dylib
+
+# --- Jupyter & notebook checkpoints ---
+.ipynb_checkpoints/
+
+# --- data & model artifacts (kept elsewhere / in Git‑LFS) ---
+data/
+models/
+*.safetensors
+*.bin
+
+# --- W&B experiment logs ---
+wandb/
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- log files ---
+*.log
+
+# --- environment / dependency locks (if generated) ---
+pip-wheel-metadata/
