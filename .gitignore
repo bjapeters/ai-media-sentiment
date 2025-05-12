@@ -32,3 +32,5 @@ Thumbs.db
 
 # --- environment / dependency locks (if generated) ---
 pip-wheel-metadata/
+
+notebooks/
